@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!--CDN of Tailwindcss is a framework that allows to use all tailwind features without instlling all setup of Tailwindcss-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Now you can start using Tailwind CSS classes in your HTML markup, eg: <button class="bg-blue-500 text-white px-4 py-2 rounded">Click Me</button>-->
+</head>
+<body class="flex flex-col min-h-screen bg-gray-100 font-sans antialised">
+    <!--Navbar-->
+    <nav class="bg-blue-600 p-4 text-white flex justify-between">
+        <div> <!--div is a divison or section for texts-->
+            <h1 class="text-3xl font-bold">AI Blog generator</h1>
+        </div>
+    </nav> 
+
+
+
+    <!--Main content-->
+    <div class="flex items-center justify-center h-screen">
+        <!--flex property enables the flexbox layout mode, allowing you to manipulate elements' alignment, spacing, and order within a container.-->
+        <div class="bg-gray p-8 shadow-md rounded-lg max-w-md w-full">
+
+            <!--Login form: Username and Password Section-->
+            <form class="space-y-4">
+                <h2 class="text-xl font-semibold">Signup</h2>
+                <div>
+                    <label for="username" class="block mb-1 font-medium">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your Username..." class="w-full p-2 rounded">
+                </div>
+                <div>
+                    <label for="email" class="block mb-1 font-medium">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Enter your Email..." class="w-full p-2 rounded">
+                </div>
+                <div>
+                    <label for="password" class="block mb-1 font-medium">Password(6 or more charcters)</label>
+                    <input type="text" id="password" name="password" placeholder="Enter your password..." class="w-full p-2 rounded">
+                </div>
+                <div>
+                    <label for="re-password" class="block mb-1 font-medium">Re-Enter Password</label>
+                    <input type="text" id="re-password" name="re-password" placeholder="Re-Enter your password..." class="w-full p-2 rounded">
+                </div>
+                
+                <!--Login Button-->
+                <button type="Submit" class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700">Join now</button>
+
+                <div>
+                    <h2 class="text-2xl">-------------------Or-----------------</h2>
+                </div>
+                <button type="signupwithgoogle" class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700">Signup with Google</button>
+                <br>
+                <button type="signupwithgoogle" class="w-full bg-purple-600 text-white p-2 rounded hover:bg-blue-700">Continue with Apple</button>
+                <div>
+                    <button class="w-full bg-blue-600 text-white font-medium p-2 rounded hover:bg-blue-700">Already on AI Blog? Sign in</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    
+</body>
+</html>

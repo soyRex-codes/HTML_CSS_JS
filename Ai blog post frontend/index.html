@@ -1,0 +1,124 @@
+<!--
+TAILWIND CSS BASICS 
+mb is margin-bottom, mt - for classes that set margin-top. mb - for classes that set margin-bottom. ml - for classes that set margin-left. mr - for classes that set margin-right. mx - for classes that set both margin-left and margin-right
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ai Blog generator</title>
+    <!--CDN of Tailwindcss is a framework that allows to use all tailwind features without instlling all setup of Tailwindcss-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Now you can start using Tailwind CSS classes in your HTML markup, eg: <button class="bg-blue-500 text-white px-4 py-2 rounded">Click Me</button>-->
+
+    <!--As you add more Tailwind CSS classes to your markup, you'll notice the ease with which you can create responsive designs,
+    experiment with different styles, and customize the look and feel of your website.
+    The powerful utility classes offered by Tailwind CSS makes it simple to achieve complex designs without writing custom CSS.-->
+
+    <style>
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to { 
+                transform: rotate(360deg);
+            }
+        }
+         
+        
+         @-webkit-keyframes rotate {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to { 
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        
+        .load {
+            width: 100px;
+            height: 100px;
+            margin: 110px auto 0;
+            border:solid 10px #22aaa3;
+            border-radius: 100%;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+             -webkit-transition: all 0.5s ease-in;
+            -webkit-animation-name:             rotate; 
+            -webkit-animation-duration:         1.0s; 
+            -webkit-animation-iteration-count:  infinite;
+            -webkit-animation-timing-function: linear;
+                
+                 transition: all 0.5s ease-in;
+            animation-name:             rotate; 
+            animation-duration:         1.0s; 
+            animation-iteration-count:  infinite;
+            animation-timing-function: linear; 
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-100 font-sans antialised">
+    <!--Navbar-->
+    <nav class="bg-blue-600 p-4 text-white flex justify-between">
+        <div> <!--div is a divison or section for texts-->
+            <h1 class="text-3xl font-bold">AI Blog generator</h1>
+        </div>
+        <div>
+            <a href="#" class="text-white hover:underline">Logout</a> <!-- <a> is anchor element used to create a hyperlink, which allows you to navigate to another web page or a different section of the same page.-->
+        </div>
+    </nav>
+    <!--Main-->
+    <div class="flex-grow container mx-auto mt-10 px-4 sm:px-0"> <!--creates a box container shape around our text-->
+        <div class="max-w-3xl mx-auto bg-white- p-6 rounded-lg shadow-md transition-transform transform hover:scale-105 flex-col"> <!--styles our box and give hover features to expand when we hover mouse on it-->
+            <!--Instroduction Section-->
+            <div class="text-center">
+                <h2 class="text-2xl font-semibold  mb-4">welcome to to Ai blog genrator</h2>
+                <p class="text-gray-700">
+                generate high quality text from from any youtube video, 
+                simply paste the youtube link below and let the AI do the rest for you!
+                </p>
+            </div>
+            <br>
+
+            <!--Youtube video link paste section -->
+            <div>
+                <h2 class="text-xl mb-4 font-semibold">Enter Youtube Link</h2>
+                <div class="flex space-x-4">
+                    <input id="youtubeLink" type="url" placeholder=" place youtube Link.." class="flex-grow border border-blue-400 rounded-l-md">
+                    <button id="generateBlogButton" class="bg-blue-600 text-white px-4 py-2 rounded-r-md hover:bg-blue-700 transition">Generate</button>
+                </div>
+            </div>
+
+
+
+            <!--section for loading.... circle-->
+            <div style="display: none;" id="loadingCycle" class="load"></div>
+            <!--later our JS code will help the loading circle to switch from none to block to start rotating when generate button is clicked-->
+            <!--now for the load icon to work we will use css styling, this is not going to happen from Tailwindcss-->
+
+
+
+            <!--Generated blog Display-->
+            <section class="mt-10 flex-grow">
+                <h2 class="text-xl mb-4 font-semibold">Generated blog Post</h2>
+                <div id="blogContent" class="mt-2 text-gray-700 space-y-4">
+                    
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+    <footer class="text-center p-4 text-black mt-6">
+        powered by<a herf="https://www.linkedin.com/in/rajkumar-kushwaha-356907256/"> Soy_Rex</a>
+    </footer>
+
+    <script> <!--script for JS(Javascript)-->
+        // Get the button and the div that will contain the generated blog post
+    </script>
+    
+</body>
+</html>

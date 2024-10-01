@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Blog Post</title>
+    <!--CDN of Tailwindcss is a framework that allows to use all tailwind features without instlling all setup of Tailwindcss-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Now you can start using Tailwind CSS classes in your HTML markup, eg: <button class="bg-blue-500 text-white px-4 py-2 rounded">Click Me</button>-->
+</head>
+<body class="flex flex-col min-h-screen bg-gray-100 font-sans antialised">
+    <!--Navbar-->
+    <nav class="bg-blue-600 p-4 text-white flex justify-between">
+        <div> <!--div is a divison or section for texts-->
+            <h1 class="text-3xl font-bold">AI Blog generator</h1>
+        </div>
+        <div>
+            <a href="#" class="text-white text-2xl hover:underline">Logout</a> <!-- <a> is anchor element used to create a hyperlink, which allows you to navigate to another web page or a different section of the same page.-->  
+        </div>
+    </nav> 
+    
+    <!--Main content container-->
+    <div class="Container mx-auto mt-10 px-10 sm:px-0">
+        <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md">
+            <!--Blog Post Section -->
+            <section>
+                <h2 class="text-xl mb-4 font-semibold">All Blog Posts</h2>
+                <div class="space-y-4">
+                    <div class="border border-gray-300 p-4 rounded-lg">
+                        <h3 class="text-lg font-semibold">Blog Post Title 1</h3>
+                        <p>This is the content of the Blog Post. gasudfguhksdjfdj</p>
+                    </div>
+                    <div class="border border-gray-300 p-4 rounded-lg">
+                        <h3 class="text-lg font-semibold">Blog Post Title 1</h3>
+                        <p>This is the content of the Blog Post. gasudfguhksdjfdj</p>
+                    </div>
+                    <!--Repeate-->
+
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer class="text-center p-4 text-black mt-6">
+        powered by<a herf="https://www.linkedin.com/in/rajkumar-kushwaha-356907256/"> Soy_Rex</a>
+    </footer>
+</body>
+</html>
